@@ -4,12 +4,14 @@
       {{ label }}
       <span v-if="isRequired" style="color: red">*</span>
     </label>
+    <br />
     <input
       type="text"
       :id="inputId"
       :name="inputId"
       :placeholder="placeholder"
-      v-model="inputValue"
+      v-model="input"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
@@ -17,7 +19,7 @@
 <script setup lang="ts">
 import { defineProps, ref } from "vue";
 
-const inputValue = ref("");
+const input = ref("");
 
 defineProps({
   inputId: {
