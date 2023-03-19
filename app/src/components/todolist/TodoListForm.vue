@@ -21,7 +21,7 @@
       :options="taskStatus"
       v-model="statusSelectValue"
     />
-    <button @click.prevent="onSubmit">Enregistrer</button>
+    <button @click.prevent="$emit('TodolistAdd', todoListItem)">Enregistrer</button>
   </form>
 </template>
 
@@ -33,6 +33,12 @@ import InputSelect from "../form/InputSelect.vue";
 const titleInputValue = ref("");
 const contentInputValue = ref("");
 const statusSelectValue = ref("");
+
+const todoListItem = {
+  title: titleInputValue,
+  content: contentInputValue,
+  status: statusSelectValue,
+};
 
 const taskStatus = [
   {
@@ -54,10 +60,7 @@ const taskStatus = [
 ];
 
 function onSubmit() {
-  console.log("Submitted");
-  console.log(titleInputValue);
-  console.log(contentInputValue);
-  console.log(statusSelectValue);
+  console.log("submitted");
 }
 </script>
 

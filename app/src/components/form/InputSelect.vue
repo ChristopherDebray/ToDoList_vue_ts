@@ -5,7 +5,7 @@
       <span v-if="isRequired" style="color: red">*</span>
     </label>
     <br />
-    <select 
+    <select
       :name="inputId"
       :id="inputId"
       v-model="input"
