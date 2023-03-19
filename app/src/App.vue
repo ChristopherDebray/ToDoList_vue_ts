@@ -1,9 +1,17 @@
 <template>
-  <TodoList />
+  <TodoListPage />
 </template>
 
 <script setup lang="ts">
-import TodoList from "@/components/todolist/TodoList.vue";
+import TodoListPage from './pages/TodoListPage.vue';
 </script>
 
-<style scoped></style>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>

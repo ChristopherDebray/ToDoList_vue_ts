@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <slot name="pageHeader">Page header</slot>
+      <slot name="pageHeader"><h1>Page header</h1></slot>
       <slot name="pageHeaderNavigation">
         <nav>
           <ul>
@@ -13,7 +13,7 @@
       </slot>
     </header>
 
-    <main>
+    <main class="content">
       <slot name="pageContent">Page content</slot>
     </main>
 
@@ -24,3 +24,34 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style scoped>
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15%;
+}
+header h1 {
+  margin: 0;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: white;
+  background-color: black;
+}
+
+.content {
+  margin: 0 15%;
+}
+</style>

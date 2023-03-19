@@ -17,4 +17,4 @@
 import MainLayout from '../base/MainLayout.vue';
 </script>
 
-<style></style>
+<style scoped></style>

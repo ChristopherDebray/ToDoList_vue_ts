@@ -1,13 +1,15 @@
 <template>
   <MainPageContentLayout>
-    <template v-slot:title></template>
+    <template v-slot:title>
+      <slot name="titlea"></slot>
+    </template>
     <template v-slot:content>
-      <div class="twoColumnLayout">
+      <div class="twoRowLayout">
         <section>
-          <slot name="leftColumn"></slot>
+          <slot name="upperRow"></slot>
         </section>
         <section>
-          <slot name="rightColumn"></slot>
+          <slot name="lowerRow"></slot>
         </section>
       </div>
     </template>
@@ -19,14 +21,14 @@ import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.v
 </script>
 
 <style scoped>
-.twoColumnLayout {
+.twoRowLayout {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
-.twoColumnLayout > section {
-  width: 500px;
-  min-height: 200px;
+.twoRowLayout > section {
+  width: 100%;
+  min-height: 100px;
 }
 </style>
