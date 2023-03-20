@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <slot name="pageHeader"><h1>Page header</h1></slot>
+      <slot name="pageHeader"><h1>My website</h1></slot>
       <slot name="pageHeaderNavigation">
         <TopNavigation />
       </slot>

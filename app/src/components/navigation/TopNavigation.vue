@@ -2,6 +2,8 @@
   <nav>
     <ul>
       <li><router-link to="/">Homepage</router-link></li>
+      <li><router-link to="/todolist">Todo list</router-link></li>
+      <li><router-link to="/todolistRow">Todo list row</router-link></li>
       <li><router-link to="/todolistColumn">Todo list column</router-link></li>
     </ul>
   </nav>

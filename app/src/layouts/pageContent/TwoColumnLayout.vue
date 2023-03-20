@@ -1,6 +1,6 @@
 <template>
   <MainPageContentLayout>
-    <template v-slot:title></template>
+    <template v-slot:title>Two column todo list</template>
     <template v-slot:content>
       <div class="twoColumnLayout">
         <section>
@@ -22,11 +22,11 @@ import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.v
 .twoColumnLayout {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .twoColumnLayout > section {
-  width: 420px;
+  min-width: 450px;
   min-height: 200px;
   margin: 1.5rem 0;
   background-color: rgba(212, 212, 212, 0.211);
