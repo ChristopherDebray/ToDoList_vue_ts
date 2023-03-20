@@ -1,6 +1,6 @@
 <template>
   <TwoRowLayout>
-    <template v-slot:titlea>Todo List page</template>
+    <template v-slot:titlea>Todo List row page</template>
 
     <template v-slot:upperRow>
       <TodoListForm v-model="todoList" @TodolistAdd="TodolistAdd" />
