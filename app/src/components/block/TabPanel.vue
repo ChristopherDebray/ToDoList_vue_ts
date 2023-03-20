@@ -21,16 +21,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import TodoListColumn from "./TodoListColumn.vue";
-import TodoListRow from "./TodoListRow.vue";
+import { ref, defineProps, PropType } from "vue";
 
-const tabs = {
-  "Row list": TodoListRow,
-  "Column list": TodoListColumn,
-};
+interface ITab = {
+  [key: string]: Object;
+}
 
-const currentTab = ref("Row list");
+const props = defineProps({
+  tabs: {
+    type: Object as PropType<ITab>,
+    required: true,
+  },
+});
+const currentTab = ref(props.tabs[0]);
 </script>
 
 <style scoped>

@@ -20,6 +20,5 @@ defineProps({
 <style scoped>
 section {
   padding: 20px;
-  border: solid 1px black;
 }
 </style>
