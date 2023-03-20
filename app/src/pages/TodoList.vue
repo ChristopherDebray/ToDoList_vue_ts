@@ -13,7 +13,9 @@
       </ul>
     </nav>
     <div>
-      <component :is="tabs[currentTab]" class="tab"></component>
+      <KeepAlive>
+        <component :is="tabs[currentTab]" class="tab"></component>
+      </KeepAlive>
     </div>
   </div>
 </template>
@@ -24,27 +26,28 @@ import TodoListColumn from "./TodoListColumn.vue";
 import TodoListRow from "./TodoListRow.vue";
 
 const tabs = {
-  ToDoListRow,
-  ToDoListColumn
+  TodoListRow,
+  TodoListColumn,
 };
 
-const currentTab = ref("ToDoListRow");
+const currentTab = ref("TodoListRow");
 </script>
 
 <style scoped>
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 nav ul li {
   cursor: pointer;
 }
 
 .tab-button {
   padding: 6px 10px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
   border: 1px solid #ccc;
   cursor: pointer;
   background: #f0f0f0;
-  margin-bottom: -1px;
-  margin-right: -1px;
 }
 .tab-button:hover {
   background: #e0e0e0;
