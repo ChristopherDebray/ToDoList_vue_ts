@@ -29,8 +29,7 @@ import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.v
 }
 .twoRowLayout > section {
   width: 100%;
-  min-height: 100px;
   margin: 1.5rem 0;
-  background-color: lightgray;
+  background-color: rgba(212, 212, 212, 0.211);
 }
 </style>

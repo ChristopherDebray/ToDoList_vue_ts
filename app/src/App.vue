@@ -1,9 +1,9 @@
 <template>
-  <TodoListPage />
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
-import TodoListPage from './pages/TodoListPage.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <style>

@@ -17,4 +17,9 @@ defineProps({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+section {
+  padding: 20px;
+  border: solid 1px black;
+}
+</style>

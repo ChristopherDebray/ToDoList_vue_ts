@@ -64,4 +64,9 @@ function onSubmit() {
 }
 </script>
 
-<style></style>
+<style scoped>
+form {
+  padding: 20px;
+  border: solid 1px black;
+}
+</style>

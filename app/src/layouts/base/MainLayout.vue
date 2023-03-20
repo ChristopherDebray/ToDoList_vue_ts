@@ -3,13 +3,7 @@
     <header>
       <slot name="pageHeader"><h1>Page header</h1></slot>
       <slot name="pageHeaderNavigation">
-        <nav>
-          <ul>
-            <li>Lien 1</li>
-            <li>Lien 2</li>
-            <li>Lien 3</li>
-          </ul>
-        </nav>
+        <TopNavigation />
       </slot>
     </header>
 
@@ -23,7 +17,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TopNavigation from '@/components/navigation/TopNavigation.vue';
+</script>
 
 <style scoped>
 header,
@@ -36,21 +32,6 @@ footer {
 header h1 {
   margin: 0;
 }
-header nav ul {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-header nav ul li {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-header nav ul li:hover {
-  color: white;
-  background-color: black;
-}
-
 .content {
   margin: 0 15%;
 }

@@ -21,7 +21,6 @@ import TodoListForm from '@/components/todolist/TodoListForm.vue';
 const todoList = reactive([]);
 
 function TodolistAdd(todoListElement) {
-  console.log(todoListElement);
   const todoElement = {};
   for (const property in todoListElement) {
     todoElement[property] = todoListElement[property].value;
@@ -29,5 +28,3 @@ function TodolistAdd(todoListElement) {
   todoList.push(todoElement);
 }
 </script>
-
-<style></style>
