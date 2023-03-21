@@ -18,32 +18,3 @@ const tabs = {
   "Column list": TodoListColumns,
 };
 </script>
-
-<style scoped>
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.tab-button {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  background: #f0f0f0;
-}
-.tab-button:hover {
-  background: #e0e0e0;
-}
-.tab-button.active {
-  background: #e0e0e0;
-}
-.tab {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-</style>

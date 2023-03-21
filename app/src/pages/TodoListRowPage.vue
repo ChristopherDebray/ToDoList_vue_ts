@@ -13,12 +13,4 @@ import TodoListRows from "@/components/todolist/TodoListRows.vue";
 import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.vue";
 
 const todoList = reactive([]);
-
-function TodolistAdd(todoListElement) {
-  const todoElement = {};
-  for (const property in todoListElement) {
-    todoElement[property] = todoListElement[property].value;
-  }
-  todoList.push(todoElement);
-}
 </script>

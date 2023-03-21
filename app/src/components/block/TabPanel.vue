@@ -25,7 +25,7 @@
 import { ref, defineProps, PropType } from "vue";
 
 interface ITab {
-  [key: string]: Object;
+  [key: string]: object;
 }
 
 const props = defineProps({
