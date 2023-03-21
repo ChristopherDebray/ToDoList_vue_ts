@@ -13,9 +13,10 @@
       </ul>
     </nav>
     <div>
-      <KeepAlive>
+      <KeepAlive v-if="keepalive">
         <component :is="tabs[currentTab]" class="tab"></component>
       </KeepAlive>
+      <component :is="tabs[currentTab]" class="tab" v-else></component>
     </div>
   </div>
 </template>
@@ -23,7 +24,7 @@
 <script setup lang="ts">
 import { ref, defineProps, PropType } from "vue";
 
-interface ITab = {
+interface ITab {
   [key: string]: Object;
 }
 
@@ -32,8 +33,14 @@ const props = defineProps({
     type: Object as PropType<ITab>,
     required: true,
   },
+  keepalive: {
+    type: Boolean,
+    default: false,
+  },
 });
-const currentTab = ref(props.tabs[0]);
+
+const firstTab = Object.keys(props.tabs)[0];
+const currentTab = ref(firstTab);
 </script>
 
 <style scoped>

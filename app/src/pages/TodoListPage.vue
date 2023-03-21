@@ -1,36 +1,22 @@
 <template>
-  <div>
-    <nav>
-      <ul>
-        <li
-          v-for="(_, tab) in tabs"
-          :key="tab"
-          :class="['tab-button', { active: currentTab === tab }]"
-          @click="currentTab = tab"
-        >
-          {{ tab }}
-        </li>
-      </ul>
-    </nav>
-    <div>
-      <KeepAlive>
-        <component :is="tabs[currentTab]" class="tab"></component>
-      </KeepAlive>
-    </div>
-  </div>
+  <MainPageContentLayout>
+    <template v-slot:title>Todo list page</template>
+    <template v-slot:content>
+      <TabPanel :tabs="tabs" :keepalive="true" />
+    </template>
+  </MainPageContentLayout>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.vue";
 import TodoListColumns from "@/components/todolist/TodoListColumns.vue";
 import TodoListRows from "@/components/todolist/TodoListRows.vue";
+import TabPanel from "@/components/block/TabPanel.vue";
 
 const tabs = {
   "Row list": TodoListRows,
   "Column list": TodoListColumns,
 };
-
-const currentTab = ref("Row list");
 </script>
 
 <style scoped>
