@@ -2,15 +2,7 @@
   <nav>
     <ul>
       <li><router-link to="/">Homepage</router-link></li>
-      <li>
-        <router-link to="/todoList/main">Todo list</router-link>
-      </li>
-      <li>
-        <router-link to="/todoList/columnView">Todo list row</router-link>
-      </li>
-      <li>
-        <router-link to="/todoList/rowView">Todo list column</router-link>
-      </li>
+      <li><router-link to="/todoList">Todo list</router-link></li>
     </ul>
   </nav>
 </template>
