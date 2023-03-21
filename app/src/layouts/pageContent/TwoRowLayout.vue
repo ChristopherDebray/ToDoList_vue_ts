@@ -1,24 +1,15 @@
 <template>
-  <MainPageContentLayout>
-    <template v-slot:title>
-      <slot name="titlea"></slot>
-    </template>
-    <template v-slot:content>
-      <div class="twoRowLayout">
-        <section>
-          <slot name="upperRow"></slot>
-        </section>
-        <section>
-          <slot name="lowerRow"></slot>
-        </section>
-      </div>
-    </template>
-  </MainPageContentLayout>
+  <div class="twoRowLayout">
+    <section>
+      <slot name="upperRow"></slot>
+    </section>
+    <section>
+      <slot name="lowerRow"></slot>
+    </section>
+  </div>
 </template>
 
-<script setup lang="ts">
-import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .twoRowLayout {

@@ -22,12 +22,12 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import TodoListColumn from "./TodoListColumn.vue";
-import TodoListRow from "./TodoListRow.vue";
+import TodoListColumns from "@/components/todolist/TodoListColumns.vue";
+import TodoListRows from "@/components/todolist/TodoListRows.vue";
 
 const tabs = {
-  "Row list": TodoListRow,
-  "Column list": TodoListColumn,
+  "Row list": TodoListRows,
+  "Column list": TodoListColumns,
 };
 
 const currentTab = ref("Row list");

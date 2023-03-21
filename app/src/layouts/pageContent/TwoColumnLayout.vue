@@ -1,22 +1,15 @@
 <template>
-  <MainPageContentLayout>
-    <template v-slot:title>Two column todo list</template>
-    <template v-slot:content>
-      <div class="twoColumnLayout">
-        <section>
-          <slot name="leftColumn"></slot>
-        </section>
-        <section>
-          <slot name="rightColumn"></slot>
-        </section>
-      </div>
-    </template>
-  </MainPageContentLayout>
+  <div class="twoColumnLayout">
+    <section>
+      <slot name="leftColumn"></slot>
+    </section>
+    <section>
+      <slot name="rightColumn"></slot>
+    </section>
+  </div>
 </template>
 
-<script setup lang="ts">
-import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .twoColumnLayout {

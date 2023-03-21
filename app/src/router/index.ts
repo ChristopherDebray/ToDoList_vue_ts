@@ -1,14 +1,14 @@
 import Home from "@/pages/Home.vue";
-import TodoList from "@/pages/TodoList.vue";
-import TodoListRow from "@/pages/TodoListRow.vue";
-import TodoListColumn from "@/pages/TodoListColumn.vue";
+import TodoListPage from "@/pages/TodoListPage.vue";
+import TodoListRowPage from "@/pages/TodoListRowPage.vue";
+import TodoListColumnPage from "@/pages/TodoListColumnPage.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/todolist", component: TodoList },
-  { path: "/todolistColumn", component: TodoListColumn },
-  { path: "/todolistRow", component: TodoListRow },
+  { path: "/todolist", component: TodoListPage },
+  { path: "/todolistColumn", component: TodoListColumnPage },
+  { path: "/todolistRow", component: TodoListRowPage },
 ];
 
 const history = createWebHashHistory();

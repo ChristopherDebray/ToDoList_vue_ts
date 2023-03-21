@@ -1,0 +1,24 @@
+<template>
+  <MainPageContentLayout>
+    <template v-slot:title>Two column todo list</template>
+    <template v-slot:content>
+      <TodoListRows />
+    </template>
+  </MainPageContentLayout>
+</template>
+
+<script setup lang="ts">
+import { reactive } from "vue";
+import TodoListRows from "@/components/todolist/TodoListRows.vue";
+import MainPageContentLayout from "@/layouts/pageContent/MainPageContentLayout.vue";
+
+const todoList = reactive([]);
+
+function TodolistAdd(todoListElement) {
+  const todoElement = {};
+  for (const property in todoListElement) {
+    todoElement[property] = todoListElement[property].value;
+  }
+  todoList.push(todoElement);
+}
+</script>
